@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DepartComponent } from './depart/depart.component';
 
@@ -9,4 +9,4 @@ const routes: Routes = [
   }
 ];
 
-export const VoyageRoutingModule: ModuleWithProviders = RouterModule.forChild(routes);
+export const VoyageRoutingModule : ModuleWithProviders = RouterModule.forChild(routes);

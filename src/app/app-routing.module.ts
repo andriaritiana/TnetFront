@@ -7,11 +7,11 @@ import { VoyageModule } from './voyage/voyage.module';
 const routes: Routes = [
   {
     path: '', 
-    loadChildren: 'app/accueil/accueil.module#AccueilModule'
+    loadChildren: './accueil/accueil.module#AccueilModule'
   },
   {
     path: 'voyage', 
-    loadChildren: 'app/voyage/voyage.module#VoyageModule'
+    loadChildren: './voyage/voyage.module#VoyageModule'
   }
 ]; 
 
