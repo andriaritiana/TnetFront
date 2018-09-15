@@ -1,6 +1,27 @@
-<h2>Liste des guichets</h2>
-<ul>
-  <li *ngFor = "let guichet of guichets$">
-    {{guichet.guichet_nom}}
-  </li>
-</ul>
+<!-- corps -->
+<div id="main-container">
+  <div id="slide">
+    <div id="slide-prev">
+      <a href="#"></a>
+    </div>
+    <ul>
+        <li *ngFor = "let ville of provinces$">
+            {{ville.guichet_nom}}
+          </li>
+    </ul>
+    <div id="slide-next">
+        <a href="#"></a>
+    </div>
+  </div>
+  <div id="slide-pagination">
+      <ul>
+        <li *ngFor = "let ville of provinces$">
+          <a href="#slide-ville-{{ville.prov_nom}}" /></a>
+        </li>
+      </ul>
+    </div>
+    
+    <div id="description-site">
+      Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global collMockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
+    </div>
+</div>
