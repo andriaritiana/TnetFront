@@ -11,6 +11,6 @@ export class DataService {
   }
 
   getCooperatives(){
-    return this.http.get("http://dev.hackaton.mg:8060/guichets");
+    //return this.http.get("http://dev.hackaton.mg:8060/guichets");
   }
 }

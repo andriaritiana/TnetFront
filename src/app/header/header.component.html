@@ -1,7 +1,12 @@
-<!-- entete -->
-<div id="header">
-		
-    <!-- menus -->
-    <nav>
-    </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li routerLinkActive="nav-item active current"><a class="nav-link" routerLink="/">Accueil</a></li>
+            <li routerLinkActive="nav-item active current"><a class="nav-link" routerLink="/voyage">Voyage</a> <li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher ..." aria-label="Recheche ">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
+          </form>
+        </div>
+      </nav>

@@ -1,12 +1,22 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DepartComponent } from './depart/depart.component';
+import { VoyageComponent } from './voyage/voyage.component';
 
-const routes: Routes = [
+const routeVoyages: Routes = [
   {
-      path: '',
-      component: DepartComponent,
+      path: 'voyage',
+      children:[
+        {
+          path:'',
+          component: VoyageComponent,
+        },
+        {
+          path:'depart',
+          component: DepartComponent
+        }
+      ]
   }
 ];
 
-export const VoyageRoutingModule : ModuleWithProviders = RouterModule.forChild(routes);
+export const VoyageRoutingModule : ModuleWithProviders = RouterModule.forChild(routeVoyages);

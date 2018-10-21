@@ -1,0 +1,765 @@
+		<!-- corps -->
+		<div id="main-container">
+		
+        <!-- bloc liste de voyages -->
+        <div id="bloc-voyages-recherche">
+          <!-- liste des options permettant de rechercher un voyage -->
+          <div id="voyages-recherche">
+            <!-- icone rechercher -->
+            <div id="bloc-rechercher-voyage">
+              <i></i>
+              <span>Trouver un<br /><span>voyage</span></span>
+            </div>
+            
+            <ul id="options-recherche-voyage">
+              <li id="options-recherche-voyage-ville-depart" class="active">
+                <a href="#choix-ville-depart">
+                  <i></i>
+                  <span class="rechercher-voyages-option-label">Ville de<br />depart</span>
+                  <span class="rechercher-voyages-option-value">Ambatondrazaka</span>
+                </a>
+              </li>
+              <li id="options-recherche-voyage-ville-arrivee">
+                <a href="#choix-ville-arrivee">
+                  <i></i>
+                  <span class="rechercher-voyages-option-label">Ville d'<br />arriv&eacute;e</span>
+                  <span class="rechercher-voyages-option-value">Antananarivo</span>
+                </a>
+              </li>
+              <li id="options-recherche-voyage-date-depart">
+                <a href="#choix-date-depart">
+                  <i></i>
+                  <span class="rechercher-voyages-option-label">Date de<br />depart</span>
+                  <span class="rechercher-voyages-option-value">21 Mars 2019</span>
+                </a>
+              </li>
+              <li id="options-recherche-voyage-cooperative">
+                <a href="#choix-cooperative">
+                  <i></i>
+                  <span class="rechercher-voyages-option-label">Coop&eacute;rative</span>
+                  <span class="rechercher-voyages-option-value">SONATRA</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="voyages-recherche-option-choix">
+            <div id="choix-ville-depart" class="active">
+              <span class="voyages-recherche-option-choix-label">
+                Choisissez une ville de depart
+              </span>
+              <!-- bloc recherche ville depart -->
+              <form class="voyage-recherche-choix">
+                <input placeholder="Ville de depart" />
+                <span></span>
+              </form>
+              <ul *ngFor="let ville of villes">
+                <li><span>{{ville.ville_nom}}</span></li>
+                <!-- <li class="active"><span>Ambatondrazaka</span></li> -->
+              </ul>
+            </div>
+            
+            <div id="choix-ville-arrivee">
+              <span class="voyages-recherche-option-choix-label">
+                Choisissez une ville d'arriv&eacute;e
+              </span>
+              <!-- bloc recherche ville depart -->
+              <form class="voyage-recherche-choix">
+                <input placeholder="Ville d'arriv&eacute;e" />
+                <span></span>
+              </form>
+              <ul *ngFor="let ville of villes">
+                <!-- <li class="active"><span>Antananarivo</span></li> -->
+                <li><span>{{ville.ville_nom}}</span></li>
+              </ul>
+            </div>
+            
+            <div id="choix-date-depart">
+              <span class="voyages-recherche-option-choix-label">
+                Vous souhaitez partir quand?
+              </span>
+              <!-- bloc choix de date de depart -->
+              <table>
+                <thead>
+                  <tr>
+                    <th class="date-mois-annee" colspan="7">Septembre 2018</th>
+                  </tr>
+                  <tr>
+                    <th class="date-semaine">L</th>
+                    <th class="date-semaine">M</th>
+                    <th class="date-semaine">M</th>
+                    <th class="date-semaine">J</th>
+                    <th class="date-semaine">V</th>
+                    <th class="date-semaine">S</th>
+                    <th class="date-semaine">D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="date-jour date-mois-precedent"><span>31</span></td>
+                    <td class="date-jour"><span>1</span></td>
+                    <td class="date-jour"><span>2</span></td>
+                    <td class="date-jour"><span>3</span></td>
+                    <td class="date-jour"><span>4</span></td>
+                    <td class="date-jour"><span>5</span></td>
+                    <td class="date-jour"><span>6</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>7</span></td>
+                    <td class="date-jour"><span>8</span></td>
+                    <td class="date-jour"><span>9</span></td>
+                    <td class="date-jour"><span>10</span></td>
+                    <td class="date-jour"><span>11</span></td>
+                    <td class="date-jour"><span>12</span></td>
+                    <td class="date-jour"><span>13</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>14</span></td>
+                    <td class="date-jour"><span>15</span></td>
+                    <td class="date-jour active"><span>16</span></td>
+                    <td class="date-jour"><span>17</span></td>
+                    <td class="date-jour"><span>18</span></td>
+                    <td class="date-jour"><span>19</span></td>
+                    <td class="date-jour"><span>20</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>21</span></td>
+                    <td class="date-jour"><span>22</span></td>
+                    <td class="date-jour"><span>23</span></td>
+                    <td class="date-jour"><span>24</span></td>
+                    <td class="date-jour"><span>25</span></td>
+                    <td class="date-jour"><span>26</span></td>
+                    <td class="date-jour"><span>27</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>28</span></td>
+                    <td class="date-jour"><span>29</span></td>
+                    <td class="date-jour"><span>30</span></td>
+                    <td class="date-jour date-mois-suivant"><span>1</span></td>
+                    <td class="date-jour date-mois-suivant"><span>2</span></td>
+                    <td class="date-jour date-mois-suivant"><span>3</span></td>
+                    <td class="date-jour date-mois-suivant"><span>4</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <table>
+                <thead>
+                  <tr>
+                    <th class="date-mois-annee" colspan="7">Octobre 2018</th>
+                  </tr>
+                  <tr>
+                    <th class="date-semaine">L</th>
+                    <th class="date-semaine">M</th>
+                    <th class="date-semaine">M</th>
+                    <th class="date-semaine">J</th>
+                    <th class="date-semaine">V</th>
+                    <th class="date-semaine">S</th>
+                    <th class="date-semaine">D</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="date-jour date-mois-precedent"><span>31</span></td>
+                    <td class="date-jour"><span>1</span></td>
+                    <td class="date-jour"><span>2</span></td>
+                    <td class="date-jour"><span>3</span></td>
+                    <td class="date-jour"><span>4</span></td>
+                    <td class="date-jour"><span>5</span></td>
+                    <td class="date-jour"><span>6</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>7</span></td>
+                    <td class="date-jour"><span>8</span></td>
+                    <td class="date-jour"><span>9</span></td>
+                    <td class="date-jour"><span>10</span></td>
+                    <td class="date-jour"><span>11</span></td>
+                    <td class="date-jour"><span>12</span></td>
+                    <td class="date-jour"><span>13</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>14</span></td>
+                    <td class="date-jour"><span>15</span></td>
+                    <td class="date-jour"><span>16</span></td>
+                    <td class="date-jour"><span>17</span></td>
+                    <td class="date-jour"><span>18</span></td>
+                    <td class="date-jour"><span>19</span></td>
+                    <td class="date-jour"><span>20</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>21</span></td>
+                    <td class="date-jour"><span>22</span></td>
+                    <td class="date-jour"><span>23</span></td>
+                    <td class="date-jour"><span>24</span></td>
+                    <td class="date-jour"><span>25</span></td>
+                    <td class="date-jour"><span>26</span></td>
+                    <td class="date-jour"><span>27</span></td>
+                  </tr>
+                  <tr>
+                    <td class="date-jour"><span>28</span></td>
+                    <td class="date-jour"><span>29</span></td>
+                    <td class="date-jour"><span>30</span></td>
+                    <td class="date-jour date-mois-suivant"><span>1</span></td>
+                    <td class="date-jour date-mois-suivant"><span>2</span></td>
+                    <td class="date-jour date-mois-suivant"><span>3</span></td>
+                    <td class="date-jour date-mois-suivant"><span>4</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div id="choix-cooperative">
+              <span class="voyages-recherche-option-choix-label">
+                Choisissez une coop&eacute;rative
+              </span>
+              <!-- bloc recherche ville depart -->
+              <form class="voyage-recherche-choix">
+                <input placeholder="Coop&eacute;rative" />
+                <span></span>
+              </form>
+              <ul>
+                <li><span>MAMI</span></li>
+                <li><span>SONATRA</span></li>
+                <li><span>COPFFM</span></li>
+                <li><span>COTRASUD</span></li>
+                <li><span>SUDACOOP</span></li>
+                <li><span>COMAMA</span></li>
+              </ul>
+            </div>
+            
+          </div>
+          
+          <div class="reservation-etape-btn">
+            <a id="reservation-etape-btn-rechercher" href="#"></a>
+          </div>
+          
+        </div>
+      
+        <!-- liste des voyages -->
+        <div id="bloc-voyages-liste">
+        
+          <!-- 1 item de voyage -->
+          <ul>
+          
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/a.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Fianarantsoa
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/b.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Fianarantsoa
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage active">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/c.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Fianarantsoa
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/d.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Fianarantsoa
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/e.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Fianarantsoa
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/f.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Ambatondrazaka
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+            <li class="voyage">
+              <!-- image du bus pour le voyage -->
+              <div class="voyage-bloc-image">
+                <div class="voyage-image-container">
+                  <!-- une image carrée ici svp -->
+                  <img src="./assets/images/bus/f.jpg" />
+                </div>
+              </div>
+              
+              <!-- informations breves sur le voyage -->
+              <div class="voyage-bloc-informations">
+                <!-- itinéraire -->
+                <span class="voyage-itineraire">
+                  <!-- ville de départ -->
+                  <span class="voyage-ville-depart">
+                    Antananarivo
+                  </span>
+                  <!-- ville d'arrivée -->
+                  <span class="voyage-ville-arrivee">
+                    Ambatondrazaka
+                  </span>
+                </span>
+                <!-- date et heure de départ -->
+                <span class="voyage-date-heure-depart">
+                  <!-- date de départ -->
+                  <span class="voyage-date-depart">
+                    Mercredi, 12 Septembre 2018 
+                  </span>
+                  <!-- à -->
+                  &agrave;
+                  <!-- heure de départ -->
+                  <span class="voyage-heure-depart">
+                    08h:30mn
+                  </span>
+                </span>
+                <!-- coopérative et frais -->
+                <span class="voyage-cooperative-frais">
+                  <!-- coopérative -->
+                  <span class="voyage-cooperative">
+                    SONATRA
+                  </span>
+                  <!-- frais -->
+                  <span class="voyage-frais">
+                    25.000 Ar
+                  </span>
+                </span>
+              </div>
+            </li>
+            
+          </ul>
+          
+          <div class="reservation-etape-btn">
+            <a id="reservation-etape-btn-choisir" href="#"></a>
+          </div>
+          
+        </div>
+        
+        <!-- Liste des places disponibles -->
+        <div id="bloc-voyage-reservation">
+          <form>
+            <input type="hidden" name="reservation-id" value="" />
+          
+            <span id="voyage-frais">25.000 Ar</span>
+            <span id="nombre-places-libres"><span>14 </span>places disponibles</span>
+            <span id="choix-place-label">Choisissez une place libre</span>
+            <table id="bus-places">
+              <tbody>
+                <!-- ligne 1 -->
+                <tr class="bus-places-ligne">
+                  <td class="bus-places-colonne">
+                  </td>
+                  <td class="bus-places-colonne">
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="1" id="bus-place-1" />
+                    <label class="bus-place" for="bus-place-1">
+                      <span>1</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="2" id="bus-place-2" />
+                    <label class="bus-place" for="bus-place-2">
+                      <span>2</span>
+                    </label>
+                  </td>
+                </tr>
+                <!-- ligne 2 -->
+                <tr class="bus-places-ligne">
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="3" id="bus-place-3" />
+                    <label class="bus-place" for="bus-place-3">
+                      <span>3</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="4" id="bus-place-4" />
+                    <label class="bus-place" for="bus-place-4">
+                      <span>4</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-5">
+                      <span>5</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-6">
+                      <span>6</span>
+                    </label>
+                  </td>
+                </tr>
+                <!-- ligne 3 -->
+                <tr class="bus-places-ligne">
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="7" id="bus-place-7" />
+                    <label class="bus-place" for="bus-place-7">
+                      <span>7</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="8" id="bus-place-8" />
+                    <label class="bus-place" for="bus-place-8">
+                      <span>8</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-9">
+                      <span>9</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="10" id="bus-place-10" />
+                    <label class="bus-place" for="bus-place-10">
+                      <span>10</span>
+                    </label>
+                  </td>
+                </tr>
+                <!-- ligne 4 -->
+                <tr class="bus-places-ligne">
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="11" id="bus-place-11" />
+                    <label class="bus-place" for="bus-place-11">
+                      <span>11</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-12">
+                      <span>12</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-13">
+                      <span>13</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <label class="bus-place" for="bus-place-14">
+                      <span>14</span>
+                    </label>
+                  </td>
+                </tr>
+                <!-- ligne 5 -->
+                <tr class="bus-places-ligne">
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="15" id="bus-place-15" />
+                    <label class="bus-place" for="bus-place-15">
+                      <span>15</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="16" id="bus-place-16" />
+                    <label class="bus-place" for="bus-place-16">
+                      <span>16</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="17" id="bus-place-17" />
+                    <label class="bus-place" for="bus-place-17">
+                      <span>17</span>
+                    </label>
+                  </td>
+                  <td class="bus-places-colonne">
+                    <input type="radio" name="bus-place" value="18" id="bus-place-18" />
+                    <label class="bus-place" for="bus-place-18">
+                      <span>18</span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        
+        <!-- informations sur un voyage choisi -->
+        <div id="bloc-voyage-informations">
+          <!-- informations sur le bus -->
+          <div id="bloc-voyage-informations-bus">
+            <div id="voyage-bus-image-container">
+              <!-- photo du bus -->
+              <img src="./assets/images/bus/a.jpg" id="voyage-bus-image" />
+              <!-- logo de la coopérative -->
+              <img src="./assets/images/bus/logo.png" id="voyage-cooperative-logo" />
+            </div>
+            <div class="voyage-information">Sprinter</div>
+              <!-- numéro du bus -->
+            <div class="voyage-information-title">2014 TAB</div>
+          </div>
+          <!-- informations sur chauffeur -->
+          <div id="bloc-voyage-informations-chauffeur">
+            <i id="voyage-chauffeur-icone"></i>
+            <div class="voyage-information-title">CHAUFFFEUR</div>
+            <!-- nom du chauffeur -->
+            <div class="voyage-information">RASOLOFO Jean Rakoto</div>
+            <!-- numéro du chauffeur -->
+            <div class="voyage-information">0340502143</div>
+          </div>
+          <!-- informations autour de la coopérative -->
+          <div id="bloc-voyage-informations-cooperative">
+            <div class="voyage-information-title">COOP&Eacute;RATIVE</div>
+            <!-- nom de la coopérative -->
+            <div class="voyage-information">SONATRA</div>
+            <!-- numéro du responsable de la coopérative -->
+            <div class="voyage-information">0332125478</div>
+            <!-- emplacement de la coopérative -->
+            <div class="voyage-information">FASAN'NY KARANA</div>
+          </div>
+        </div>
+        
+      </div>

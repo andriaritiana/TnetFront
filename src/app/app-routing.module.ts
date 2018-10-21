@@ -6,21 +6,24 @@ import { VoyageModule } from './voyage/voyage.module';
 
 const routes: Routes = [
   {
-    path: '', 
-    loadChildren: './accueil/accueil.module#AccueilModule'
+    path: '',
+    redirectTo:'/accueil',
+    pathMatch:'full'
   },
   {
-    path: 'voyage', 
-    loadChildren: './voyage/voyage.module#VoyageModule'
+    path: 'voyage',
+    redirectTo:'/voyage',
+    pathMatch:'full'
   }
 ]; 
 
 @NgModule({
   imports: [
   	RouterModule.forRoot(routes),
-    CommonModule
+    CommonModule,
+    AccueilModule,
+    VoyageModule
   ],
-  declarations: [],
-  exports: [ RouterModule, AccueilModule ]
+  declarations: []
 })
 export class AppRoutingModule { }

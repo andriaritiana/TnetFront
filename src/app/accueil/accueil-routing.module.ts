@@ -4,8 +4,13 @@ import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [
   {
-      path: '',
-      component: CarouselComponent,
+      path: 'accueil',
+      children:[
+        {
+          path:'',
+          component: CarouselComponent,
+        }
+      ]
   }
 ];
 

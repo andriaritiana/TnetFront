@@ -61,11 +61,11 @@ export class CarouselComponent implements OnInit {
     });
 
 
-    this.data.getCooperatives().subscribe(
+    /* this.data.getCooperatives().subscribe(
       //data => { this.guichets$ = data.data; console.log(data)},
       err => console.error(err),
       () => console.log('done loading guichets')
-    )
+    ) */
   }
 
 }
