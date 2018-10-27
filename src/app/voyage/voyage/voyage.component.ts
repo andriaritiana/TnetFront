@@ -29,50 +29,50 @@ export class VoyageComponent implements OnInit {
 
   get_all_villes(){
     this.voyageService.get_all_villes()
-    .subscribe(response => {  this.villes = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => {  this.villes = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_chauffeurs(){
     this.voyageService.get_all_chauffeurs()
-    .subscribe(response => {  this.chauffeurs = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => {  this.chauffeurs = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_listages(){
     this.voyageService.get_all_listages()
-    .subscribe(response => {  this.listages = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => {  this.listages = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_vehicules(){
     this.voyageService.get_all_vehicules()
-    .subscribe(response => {  this.vehicules = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => { this.vehicules = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_type_vehicules(){
     this.voyageService.get_all_type_vehicules()
-    .subscribe(response => {  this.type_vehicules = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => { this.type_vehicules = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_cat_vehicules(){
     this.voyageService.get_all_cat_vehicules()
-    .subscribe(response => {  this.cat_vehicules = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => { this.cat_vehicules = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
   get_all_voyages(){
     this.voyageService.get_all_voyages()
-    .subscribe(response => {  this.voyages = response.json();},
-              error =>  {  console.log(error.json()); } 
+    .subscribe(response => { this.voyages = response.json().data},
+              error =>  {  console.log(error); } 
               );
   }
 
