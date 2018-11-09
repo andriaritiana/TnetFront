@@ -11,7 +11,7 @@ declare var $ :any;
 })
 export class CarouselComponent implements OnInit {
 
-    guichets$: Object;
+    provinces$: Object;
 
   constructor(private data : DataService) { }
 
@@ -61,11 +61,13 @@ export class CarouselComponent implements OnInit {
     });
 
 
-    /* this.data.getCooperatives().subscribe(
-      //data => { this.guichets$ = data.data; console.log(data)},
+    this.data.getProvincesForCarousel().subscribe(
+      //res => { this.provinces$ = res.data; console.log(res)},
+      res => { this.provinces$ = res; console.log(res);
+      },
       err => console.error(err),
-      () => console.log('done loading guichets')
-    ) */
+      () => console.log('Done loading provinces with infos')
+    )
   }
 
 }

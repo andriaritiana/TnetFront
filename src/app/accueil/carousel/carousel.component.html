@@ -5,397 +5,78 @@
       <a href="#"></a>
     </div>
     <ul>
-    
-      <li id="slide-ville-antananarivo" class="current">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell"id="slide-cell-antananarivo-1">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Fianarantsoa</span>
+        <li *ngFor = "let ville of provinces$; let i = index;" [attr.id] = "'slide-ville-'+ville.prov_nom" [attr.class] = "i == 0 && 'current' || ''">
+          <div class="slide-item">
+            <div class="slide-column slide-column-1" >
+              <div class="slide-cell"id="slide-cell-{{ville.prov_nom | lowercase}}-1">
+                <span class="slide-cooperative-nom">{{ville.infos[0].coop_abrev | uppercase}}</span>
+                <span class="slide-cooperative-ville">{{ville.infos[0].ville.ville_nom}}</span>
+              </div>
+              <div class="slide-cell slide-cell-2" id="slide-cell-{{ville.prov_nom | lowercase}}-2">
+              </div>
             </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-antananarivo-2">
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-antananarivo">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">47 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Antananarivo
+            <div class="slide-main-column" id="slide-main-column-{{ville.prov_nom | lowercase}}">
+              <span class="slide-ville-cooperatives">
+                <span class="slide-ville-nb-cooperatives">{{ville.nb_province}}</span>coop&eacute;ratives
               </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la capitale de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
+              <div class="slide-ville-info">
+                <span class="slide-ville-nom">
+                  {{ville.prov_nom}}
+                </span>
+                <br /><br />
+                <span class="slide-ville-description">
+                  {{ville.prov_description}}
+                </span>
+              </div>
+            </div>
+            <div class="slide-column slide-column-2">
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-3">
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-4">
+                <span class="slide-cooperative-nom">{{ville.infos[1].coop_abrev | uppercase}}</span>
+                <span class="slide-cooperative-ville">{{ville.infos[1].ville.ville_nom}}</span>
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-5">
+              </div>
+            </div>
+            <div class="slide-column slide-column-3">
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-6">
+                <span class="slide-cooperative-nom">{{ville.infos[2].coop_abrev | uppercase}}</span>
+                <span class="slide-cooperative-ville">{{ville.infos[2].ville.ville_nom}}</span>
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-7">
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-8">
+                <span class="slide-cooperative-nom">{{ville.infos[3].coop_abrev | uppercase}}</span>
+                <span class="slide-cooperative-ville">{{ville.infos[3].ville.ville_nom}}</span>
+              </div>
+            </div>
+            <div class="slide-column slide-column-4">
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-9">
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-10">
+                <span class="slide-cooperative-nom">{{ville.infos[4].coop_abrev | uppercase}}</span>
+                <span class="slide-cooperative-ville">{{ville.infos[4].ville.ville_nom}}</span>
+              </div>
+              <div class="slide-cell" id="slide-cell-{{ville.prov_nom | lowercase}}-11">
+              </div>
             </div>
           </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-antananarivo-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-4">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-5">
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-antananarivo-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-7">
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-8">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-4">
-            <div class="slide-cell" id="slide-cell-antananarivo-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-10">
-              <span class="slide-cooperative-nom">TSIROCOOP</span>
-              <span class="slide-cooperative-ville">Tsiroanomandidy</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antananarivo-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <li id="slide-ville-fianarantsoa">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell slide-cell-2" id="slide-cell-fianarantsoa-2">
-            </div>
-            <div class="slide-cell"id="slide-cell-fianarantsoa-1">
-              <span class="slide-cooperative-nom">COFIMAN</span>
-              <span class="slide-cooperative-ville">Manakara</span>
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-fianarantsoa">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">35 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Fianarantsoa
-              </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la province de la vigne de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-fianarantsoa-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-4">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Antananarivo</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-5">
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-fianarantsoa-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-7">
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-8">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-4">
-            <div class="slide-cell" id="slide-cell-fianarantsoa-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-10">
-              <span class="slide-cooperative-nom">MAMIVO</span>
-              <span class="slide-cooperative-ville">Antsirabe</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-fianarantsoa-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <li id="slide-ville-mahajanga">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell"id="slide-cell-mahajanga-1">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Fianarantsoa</span>
-            </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-mahajanga-2">
-            </div>
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-mahajanga-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-mahajanga-4">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-mahajanga-5">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-mahajanga">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">18 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Mahajanga
-              </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la capitale de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-mahajanga-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-mahajanga-7">
-            </div>
-            <!--div class="slide-cell" id="slide-cell-mahajanga-8">
-            </div-->
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-mahajanga-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-mahajanga-10">
-              <span class="slide-cooperative-nom">COOPEFFM</span>
-              <span class="slide-cooperative-ville">Ambilobe</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-mahajanga-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <li id="slide-ville-toamasina">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell"id="slide-cell-toamasina-1">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Fianarantsoa</span>
-            </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-toamasina-2">
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-toamasina">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">35 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Toamasina
-              </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la capitale de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-toamasina-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-4">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-5">
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-toamasina-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-7">
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-8">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-4">
-            <div class="slide-cell" id="slide-cell-toamasina-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-10">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toamasina-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <li id="slide-ville-toliara">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell"id="slide-cell-toliara-1">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Fianarantsoa</span>
-            </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-toliara-2">
-            </div>
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-toliara-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-4">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-5">
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-toliara-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-7">
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-8">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-toliara">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">19 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Toliara
-              </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la capitale de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-4">
-            <div class="slide-cell" id="slide-cell-toliara-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-10">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-toliara-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
-      <li id="slide-ville-antsiranana">
-        <div class="slide-item">
-          <div class="slide-column slide-column-1" >
-            <div class="slide-cell"id="slide-cell-antsiranana-1">
-              <span class="slide-cooperative-nom">MAMI</span>
-              <span class="slide-cooperative-ville">Fianarantsoa</span>
-            </div>
-            <div class="slide-cell slide-cell-2" id="slide-cell-antsiranana-2">
-            </div>
-          </div>
-          <div class="slide-main-column" id="slide-main-column-antsiranana">
-            <span class="slide-ville-cooperatives">
-              <span class="slide-ville-nb-cooperatives">27 </span>coop&eacute;ratives
-            </span>
-            <div class="slide-ville-info">
-              <span class="slide-ville-nom">
-                Antsiranana
-              </span>
-              <br /><br />
-              <span class="slide-ville-description">
-                Visitez la capitale de Madagascar.<br />
-                Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-              </span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-2">
-            <div class="slide-cell" id="slide-cell-antsiranana-3">
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-4">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-5">
-            </div>
-          </div>
-          <div class="slide-column slide-column-3">
-            <div class="slide-cell" id="slide-cell-antsiranana-6">
-              <span class="slide-cooperative-nom">COTRA-SUD</span>
-              <span class="slide-cooperative-ville">Toliara</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-7">
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-8">
-              <span class="slide-cooperative-nom">COTRAMA</span>
-              <span class="slide-cooperative-ville">Mahajanga</span>
-            </div>
-          </div>
-          <div class="slide-column slide-column-4">
-            <div class="slide-cell" id="slide-cell-antsiranana-9">
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-10">
-              <span class="slide-cooperative-nom">ZIZAH</span>
-              <span class="slide-cooperative-ville">Ambatondrazaka</span>
-            </div>
-            <div class="slide-cell" id="slide-cell-antsiranana-11">
-            </div>
-          </div>
-        </div>
-      </li>
-      
+        </li>
     </ul>
     <div id="slide-next">
-      <a href="#"></a>
+        <a href="#"></a>
     </div>
   </div>
   <div id="slide-pagination">
-    <ul>
-      <li class="active">
-        <a href="#slide-ville-antananarivo"></a>
-      </li>
-      <li>
-        <a href="#slide-ville-fianarantsoa"></a>
-      </li>
-      <li>
-        <a href="#slide-ville-mahajanga"></a>
-      </li>
-      <li>
-        <a href="#slide-ville-toamasina"></a>
-      </li>
-      <li>
-        <a href="#slide-ville-toliara"></a>
-      </li>
-      <li>
-        <a href="#slide-ville-antsiranana"></a>
-      </li>
-    </ul>
+      <ul>
+        <li *ngFor = "let ville of provinces$; let i = index;" [attr.class] = "i == 0 && 'active' || ''">
+          <a href="#slide-ville-{{ville.prov_nom | lowercase}}" ></a>
+        </li>
+      </ul>
   </div>
-  
-  <div id="description-site">
-    Mockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global collMockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
-  </div>
-
+    
+    <div id="description-site">
+      Mockplus* is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global collMockplus is a faster and easier prototyping tool to help you make prototypes by making interactions with simple drag-and-drop and working on a team project easily and effortlessly. Microsoft, Oracle, Simens, IBM, UBI, Huawei and 300+ global colleges are using it, YOU SHOULD TOO!
+    </div>
 </div>
