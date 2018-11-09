@@ -216,72 +216,72 @@
 #slide-prev > a {
 	left: 0;
 	padding-left: 40px;
-	background-image: url(../../../assets/css/icones/slide-prev.png);
+	background-image: url(icones/slide-prev.png);
 }
 
 #slide-next > a {
 	right: 0;
 	padding-right: 40px;
-	background-image: url(../../../assets/css/icones/slide-next.png);
+	background-image: url(icones/slide-next.png);
 }
 
 #slide-main-column-antananarivo {
-	background-image: url(../../../assets/css/villes/antananarivo.jpg);
+	background-image: url(villes/antananarivo.jpg);
 }
 
 #slide-cell-antananarivo-2 {
-	background-image: url(../../../assets/css/villes/antananarivo-2.jpg);
+	background-image: url(villes/antananarivo-2.jpg);
 }
 
 
 
 #slide-main-column-fianarantsoa {
-	background-image: url(../../../assets/css/villes/fianarantsoa.jpg);
+	background-image: url(villes/fianarantsoa.jpg);
 }
 
 #slide-cell-fianarantsoa-2 {
-	background-image: url(../../../assets/css/villes/fianarantsoa-2.jpg);
+	background-image: url(villes/fianarantsoa-2.jpg);
 }
 
 
 
 #slide-main-column-mahajanga {
-	background-image: url(../../../assets/css/villes/mahajanga.jpg);
+	background-image: url(villes/mahajanga.jpg);
 }
 
 #slide-cell-mahajanga-2 {
-	background-image: url(../../../assets/css/villes/mahajanga-2.jpg);
+	background-image: url(villes/mahajanga-2.jpg);
 }
 
 
 
 #slide-main-column-toamasina {
-	background-image: url(../../../assets/css/villes/toamasina.jpg);
+	background-image: url(villes/toamasina.jpg);
 }
 
 #slide-cell-toamasina-2 {
-	background-image: url(../../../assets/css/villes/toamasina-2.jpg);
+	background-image: url(villes/toamasina-2.jpg);
 }
 
 
 
 
 #slide-main-column-toliara {
-	background-image: url(../../../assets/css/villes/toliara.jpg);
+	background-image: url(villes/toliara.jpg);
 }
 
 #slide-cell-toliara-2 {
-	background-image: url(../../../assets/css/villes/toliara-2.jpg);
+	background-image: url(villes/toliara-2.jpg);
 }
 
 
 
 #slide-main-column-antsiranana {
-	background-image: url(../../../assets/css/villes/antsiranana.jpg);
+	background-image: url(villes/antsiranana.jpg);
 }
 
 #slide-cell-antsiranana-2 {
-	background-image: url(../../../assets/css/villes/antsiranana-2.jpg);
+	background-image: url(villes/antsiranana-2.jpg);
 }
 
 
@@ -340,50 +340,50 @@
 @media (min-width: 1200px) {
 		
 	#slide-cell-antananarivo-9 {
-		background-image: url(../../../assets/css/villes/antananarivo-6.jpg);
+		background-image: url(villes/antananarivo-6.jpg);
 	}
 
 	#slide-cell-antananarivo-11 {
-		background-image: url(../../../assets/css/villes/antananarivo-7.jpg);
+		background-image: url(villes/antananarivo-7.jpg);
 	}
 
 	#slide-cell-fianarantsoa-9 {
-		background-image: url(../../../assets/css/villes/fianarantsoa-6.jpg);
+		background-image: url(villes/fianarantsoa-6.jpg);
 	}
 
 	#slide-cell-fianarantsoa-11 {
-		background-image: url(../../../assets/css/villes/fianarantsoa-7.jpg);
+		background-image: url(villes/fianarantsoa-7.jpg);
 	}
 
 	#slide-cell-mahajanga-9 {
-		background-image: url(../../../assets/css/villes/mahajanga-6.jpg);
+		background-image: url(villes/mahajanga-6.jpg);
 	}
 
 	#slide-cell-mahajanga-11 {
-		background-image: url(../../../assets/css/villes/mahajanga-7.jpg);
+		background-image: url(villes/mahajanga-7.jpg);
 	}
 
 	#slide-cell-toamasina-9 {
-		background-image: url(../../../assets/css/villes/toamasina-6.jpg);
+		background-image: url(villes/toamasina-6.jpg);
 	}
 
 	#slide-cell-toamasina-11 {
-		background-image: url(../../../assets/css/villes/toamasina-7.jpg);
+		background-image: url(villes/toamasina-7.jpg);
 	}
 	#slide-cell-toliara-9 {
-		background-image: url(../../../assets/css/villes/toliara-6.jpg);
+		background-image: url(villes/toliara-6.jpg);
 	}
 
 	#slide-cell-toliara-11 {
-		background-image: url(../../../assets/css/villes/toliara-7.jpg);
+		background-image: url(villes/toliara-7.jpg);
 	}
 
 	#slide-cell-antsiranana-9 {
-		background-image: url(../../../assets/css/villes/antsiranana-6.jpg);
+		background-image: url(villes/antsiranana-6.jpg);
 	}
 
 	#slide-cell-antsiranana-11 {
-		background-image: url(../../../assets/css/villes/antsiranana-7.jpg);
+		background-image: url(villes/antsiranana-7.jpg);
 	}
 
 }
@@ -404,29 +404,29 @@
 @media (min-width: 992px) {
 		
 	#slide-cell-antananarivo-7 {
-		background-image: url(../../../assets/css/villes/antananarivo-5.jpg);
+		background-image: url(villes/antananarivo-5.jpg);
 	}
 
 	#slide-cell-fianarantsoa-7 {
-		background-image: url(../../../assets/css/villes/fianarantsoa-5.png);
+		background-image: url(villes/fianarantsoa-5.png);
 	}
 
 	#slide-cell-mahajanga-7 {
-		background-image: url(../../../assets/css/villes/mahajanga-5.jpg);
+		background-image: url(villes/mahajanga-5.jpg);
 	}
 
 	#slide-cell-toamasina-7 {
-		background-image: url(../../../assets/css/villes/toamasina-5.jpg);
+		background-image: url(villes/toamasina-5.jpg);
 	}
 
 	#slide-cell-toliara-7 {
-		background-image: url(../../../assets/css/villes/toliara-5.jpg);
+		background-image: url(villes/toliara-5.jpg);
 	}
 
 	#slide-cell-antsiranana-7 {
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url(../../../assets/css/villes/antsiranana-5.png);
+		background-image: url(villes/antsiranana-5.png);
 	}
 
 }
@@ -451,55 +451,55 @@
 	#slide-cell-antananarivo-3 {
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url(../../../assets/css/villes/antananarivo-3.png);
+		background-image: url(villes/antananarivo-3.png);
 	}
 
 	#slide-cell-antananarivo-5 {
-		background-image: url(../../../assets/css/villes/antananarivo-4.jpg);
+		background-image: url(villes/antananarivo-4.jpg);
 	}
 
 	#slide-cell-fianarantsoa-3 {
-		background-image: url(../../../assets/css/villes/fianarantsoa-3.jpg);
+		background-image: url(villes/fianarantsoa-3.jpg);
 	}
 
 	#slide-cell-fianarantsoa-5 {
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url(../../../assets/css/villes/fianarantsoa-4.png);
+		background-image: url(villes/fianarantsoa-4.png);
 	}
 
 	#slide-cell-mahajanga-3 {
-		background-image: url(../../../assets/css/villes/mahajanga-3.jpg);
+		background-image: url(villes/mahajanga-3.jpg);
 	}
 
 	#slide-cell-mahajanga-5 {
-		background-image: url(../../../assets/css/villes/mahajanga-4.jpg);
+		background-image: url(villes/mahajanga-4.jpg);
 	}
 
 	#slide-cell-toamasina-3 {
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url(../../../assets/css/villes/toamasina-3.png);
+		background-image: url(villes/toamasina-3.png);
 	}
 
 	#slide-cell-toamasina-5 {
-		background-image: url(../../../assets/css/villes/toamasina-4.jpg);
+		background-image: url(villes/toamasina-4.jpg);
 	}
 
 	#slide-cell-toliara-3 {
-		background-image: url(../../../assets/css/villes/toliara-3.jpg);
+		background-image: url(villes/toliara-3.jpg);
 	}
 
 	#slide-cell-toliara-5 {
-		background-image: url(../../../assets/css/villes/toliara-4.jpg);
+		background-image: url(villes/toliara-4.jpg);
 	}
 
 	#slide-cell-antsiranana-3 {
-		background-image: url(../../../assets/css/villes/antsiranana-3.jpg);
+		background-image: url(villes/antsiranana-3.jpg);
 	}
 
 	#slide-cell-antsiranana-5 {
-		background-image: url(../../../assets/css/villes/antsiranana-4.jpg);
+		background-image: url(villes/antsiranana-4.jpg);
 	}
 
 	#slide > ul {
