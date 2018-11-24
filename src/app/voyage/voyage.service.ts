@@ -32,8 +32,8 @@ export class VoyageService {
     return this.http.get(this.URL_SERVICE + '/type_vehicule');
   }
 
-  get_all_cat_vehicules(){
-    return this.http.get(this.URL_SERVICE + '/cat_vehicule');
+  get_all_classe_vehicules(){
+    return this.http.get(this.URL_SERVICE + '/classe_vehicule');
   }
 
   get_all_voyages(){

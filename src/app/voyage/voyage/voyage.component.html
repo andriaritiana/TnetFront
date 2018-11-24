@@ -3,25 +3,101 @@
         <div class="col-md-2">
           <h1>VILLE</h1>
           <ul *ngFor="let v of villes">
-            <li>{{ v.ville_nom }}</li>
+            <li>
+              <ul>
+                <li>{{v.province_nom}}</li>
+                <li>{{v.ville_nom}}</li>
+              </ul>
+            </li>
           </ul>
         </div>
         <div class="col-md-2">
           <h1>CHAUFFEURS</h1>
-          <ul *ngFor="let f of chauffeurs">
-            <li>{{ f.chauf_nom }}</li>
-          </ul>
-        </div>
-<!--         <div class="col-md-2">
-          <h1>VEHICULES</h1>
-          <ul *ngFor="let v of vehicules">
-            <li>{{ v.vehic_nom }}</li>
+          <ul *ngFor="let ch of chauffeurs">
+              <li>
+                  <ul>
+                    <li>{{ch.chauf_nom}}</li>
+                    <li>{{ch.chauf_tel}}</li>
+                  </ul>
+              </li>
           </ul>
         </div>
         <div class="col-md-2">
-          <h1>VOYAGE</h1>
-          <ul *ngFor="let v of voyages">
-            <li>{{ v.voy_id }}</li>
+          <h1>VEHICULES</h1>
+          <ul *ngFor="let vehic of vehicules">
+              <li>
+                  <ul>
+                    <li>{{vehic.vehic_numero}}</li>
+                    <li>{{vehic.vehic_couleur}}</li>
+                    <li>{{vehic.typv_nom}}</li>
+                    <li>{{vehic.typv_description}}</li>
+                    <li>{{vehic.typv_url_image}}</li>
+                  </ul>
+              </li>
           </ul>
-        </div> -->
+        </div>
+        <div class="col-md-1">
+          <h1>TYPE VEHICULES</h1>
+          <ul *ngFor="let tv of type_vehicules">
+              <li>
+                  <ul>
+                    <li>{{tv.typv_nom}}</li>
+                    <li>{{tv.typv_description}}</li>
+                    <li>{{tv.typv_url_image}}</li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-1">
+          <h1>CLASSE VEHICULES</h1>
+          <ul *ngFor="let cl of classe_vehicules">
+              <li>
+                  <ul>
+                    <li>{{cl.cl_vehic_libelle}}</li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+            <h1>LISTAGE</h1>
+            <ul *ngFor="let lis of listages">
+                <li>
+                    <ul>
+                      <li>{{lis.chauf_nom}}</li>
+                      <li>{{lis.chauf_tel}}</li>
+                      <li>{{lis.vehic_numero}}</li>
+                      <li>{{lis.vehic_couleur}}</li>
+                      <li>{{lis.listage_etat}}</li>
+                      <li>{{lis.listage_ordre}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+          <h1>VOYAGE</h1>
+          <ul *ngFor="let voy of voyages">
+              <li>
+                  <ul>
+                    <li>{{voy.chauf_nom}}</li>
+                    <li>{{voy.chauf_tel}}</li>
+                    <li>{{voy.vehic_numero}}</li>
+                    <li>{{voy.vehic_couleur}}</li>
+                    <li>{{voy.listage_etat}}</li>
+                    <li>{{voy.listage_ordre}}</li>
+                    <li>{{voy.typv_nom}}</li>
+                    <li>{{voy.typv_description}}</li>
+                    <li>{{voy.typv_url_image}}</li>
+                    <li>{{voy.vehic_libelle}}</li>
+                    <li>{{voy.itin_depart}}</li>
+                    <li>{{voy.itin_arrivee}}</li>
+                    <li>{{voy.guichet_nom}}</li>
+                    <li>{{voy.guichet_adresse}}</li>
+                    <li>{{voy.itin_depart_dispo}}</li>
+                    <li>{{voy.voy_heure_depart}}</li>
+                    <li>{{voy.voy_heure_arrivee}}</li>
+                    <li>{{voy.voy_etat}}</li>
+                  </ul>
+              </li>
+          </ul>
+        </div>
       </div>

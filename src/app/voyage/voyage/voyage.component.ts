@@ -11,7 +11,7 @@ export class VoyageComponent implements OnInit {
   chauffeurs:any = []
   listages:any = []
   vehicules:any = []
-  cat_vehicules:any = []
+  classe_vehicules:any = []
   type_vehicules:any = []
   voyages:any = []
 
@@ -23,7 +23,7 @@ export class VoyageComponent implements OnInit {
     this.get_all_listages();
     this.get_all_vehicules();
     this.get_all_type_vehicules();
-    this.get_all_cat_vehicules();
+    this.get_all_classe_vehicules();
     this.get_all_voyages();
   }
 
@@ -68,9 +68,9 @@ export class VoyageComponent implements OnInit {
               );
   }
 
-  get_all_cat_vehicules(){
-    this.voyageService.get_all_cat_vehicules()
-    .subscribe(response => { this.cat_vehicules = response.json()},
+  get_all_classe_vehicules(){
+    this.voyageService.get_all_classe_vehicules()
+    .subscribe(response => { this.classe_vehicules = response.json()},
               error =>  {  console.log(error); } 
               );
   }
