@@ -5,7 +5,7 @@
       <a href="#"></a>
     </div>
     <ul>
-        <li *ngFor = "let ville of provinces$; let i = index;" [attr.id] = "'slide-ville-'+ville.prov_nom" [attr.class] = "i == 0 && 'current' || ''">
+        <li *ngFor = "let ville of provinces; let i = index;" [attr.id] = "'slide-ville-'+ville.prov_nom" [attr.class] = "i == 0 && 'current' || ''">
           <div class="slide-item">
             <div class="slide-column slide-column-1" >
               <div class="slide-cell"id="slide-cell-{{ville.prov_nom | lowercase}}-1">
