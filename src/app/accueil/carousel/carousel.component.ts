@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
+import { reslt } from '../../common/common.interface';
 import { Observable } from 'rxjs';
 
 declare var $ :any;
@@ -11,7 +12,7 @@ declare var $ :any;
 })
 export class CarouselComponent implements OnInit {
 
-    provinces$: Object;
+  provinces: Object;
 
   constructor(private data : DataService) { }
 
@@ -41,7 +42,7 @@ export class CarouselComponent implements OnInit {
         $("#slide-pagination > ul > li.active").removeClass("active");
         $($("#slide-pagination > ul > li")[index - 1]).addClass("active");
       }
-    }
+    } 
   
     $(function() {
       $("#slide-next > a").click(defilerSlideADroite);
@@ -62,12 +63,14 @@ export class CarouselComponent implements OnInit {
 
 
     this.data.getProvincesForCarousel().subscribe(
-     //res => { this.provinces$ = res.data; console.log(res)}
-      //res => { this.provinces$ = res; console.log(res);
-     // },
+      res => { 
+        let result = <reslt>res;
+        this.provinces = result.data;}, 
       err => console.error(err),
       () => console.log('Done loading provinces with infos')
-    )
+    );
   }
 
 }
+
+

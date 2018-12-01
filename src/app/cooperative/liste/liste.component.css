@@ -1,0 +1,27 @@
+#cooperative-wrapper {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: repeat(4, 100px);
+    grid-gap: 5px;
+    margin-left: 5%
+}
+.box-cooperative {
+    background-color: #8c4690;
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+}
+.image-coop {
+    width: 100px;
+    height: 100%;
+    float: left;
+    margin-right: 5px;
+}
+.info-coop {
+    position: relative;
+}
+.contact-coop {
+    position: absolute;
+    top: 160%;
+    right: 0;
+}

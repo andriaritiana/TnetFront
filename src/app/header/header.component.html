@@ -1,12 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav mr-auto">
-            <li routerLinkActive="nav-item active current"><a class="nav-link" routerLink="/">Accueil</a></li>
-            <li routerLinkActive="nav-item active current"><a class="nav-link" routerLink="/voyage">Voyage</a> <li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Rechercher ..." aria-label="Recheche ">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Rechercher</button>
-          </form>
-        </div>
-      </nav>
+<!-- entete -->
+<div id="header">
+  <!-- menus -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">TransNet Madagascar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="/">Accueil <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="/voyage">Voyager</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <a class="nav-link" routerLink="/cooperative">Coopérative</a>
+          </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher sur le site" aria-label="Chercher">
+        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Chercher</button>
+      </form>
+    </div>
+  </nav>
+</div>

@@ -11,9 +11,12 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path: 'voyage',
-    redirectTo:'/voyage',
-    pathMatch:'full'
+    path: 'voyage', 
+    loadChildren: './voyage/voyage.module#VoyageModule'
+  },
+  {
+    path: 'cooperative', 
+    loadChildren: './cooperative/cooperative.module#CooperativeModule'
   }
 ]; 
 

@@ -13,7 +13,7 @@ export class DataService {
   }
 
   getCooperatives(){
-    return this.http.get(this.base_url +"guichets");
+    return this.http.get(this.base_url +"api/cooperatives");
   }
 
   getProvincesForCarousel() {
