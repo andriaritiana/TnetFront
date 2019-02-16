@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  base_url = "http://dev.hackaton.mg:8060/";
+  base_url = "http://localhost:8060/";
 
   constructor(private http : HttpClient) {
 
