@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { VoyageService } from './../voyage.service';
 import { BsLocaleService } from 'ngx-bootstrap/datepicker';
+import {select, Store} from "@ngrx/store";
+import {AppState} from "../../index";
+import {Voyage} from "../state/voyage.interface"
+import {Observable} from "rxjs/Rx";
+import {Router} from "@angular/router";
+import {VoyagesModule} from "../state/voyage.actions";
+import {selectVoyageListEntitiesConverted$, selectVoyagesLoading$} from "../state/voyage.selector";
+
 
 declare var $ :any;
 
@@ -20,8 +28,17 @@ export class VoyageComponent implements OnInit {
   type_vehicules:any = []
   voyages:any = []
 
+  public voyages$: Observable<Voyage[]>;
+  public  voyagesLoading: Observable<boolean>;
+
   constructor(private voyageService:VoyageService,
-              private _localeService: BsLocaleService) {
+    private _localeService: BsLocaleService, 
+    private router: Router, 
+    private store: Store<AppState>) {
+    this.voyages$ = store
+      .pipe(select(selectVoyageListEntitiesConverted$));
+
+    this.voyagesLoading = store.pipe(select(selectVoyagesLoading$));
     this._localeService.use('fr');
   }
 
@@ -118,6 +135,7 @@ export class VoyageComponent implements OnInit {
 
   ngOnInit() {
 
+    this.store.dispatch(new VoyagesModule.LoadInitVoyages());
     $(function() {
       
       $("#reservation-etape-btn-rechercher").click(function(e) {

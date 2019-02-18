@@ -9,8 +9,8 @@ declare var $ :any;
 })
 export class DepartComponent implements OnInit {
 
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     $(function() {

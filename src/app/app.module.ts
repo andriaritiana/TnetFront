@@ -28,7 +28,7 @@ import { environment } from 'src/environments/environment.prod';
     StoreModule.forRoot(REDUCER_TOKEN),
     EffectsModule.forRoot(appEffects),
     StoreDevtoolsModule.instrument({
-      name: '[DEMOANGULAR]',
+      name: '[TRANSNET]',
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production // Restrict extension to log-only mode
     }),
