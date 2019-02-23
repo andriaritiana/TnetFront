@@ -7,7 +7,7 @@ import {Voyage} from "../state/voyage.interface"
 import {Observable} from "rxjs/Rx";
 import {Router} from "@angular/router";
 import {VoyagesModule} from "../state/voyage.actions";
-import {selectVoyageListEntitiesConverted$, selectVoyagesLoading$} from "../state/voyage.selector";
+import {selectVoyageListEntitiesConverted$, selectVoyagesLoading$, selectShowVilleArrivee$, selectShowVilleDepart$} from "../state/voyage.selector";
 
 
 declare var $ :any;
@@ -29,16 +29,16 @@ export class VoyageComponent implements OnInit {
   voyages:any = []
 
   public voyages$: Observable<Voyage[]>;
-  public  voyagesLoading: Observable<boolean>;
+  public voyagesLoading: Observable<boolean>;
+  public showVilleDepart: Observable<boolean>;
+  public showVilleArrivee: Observable<boolean>;
 
-  constructor(private voyageService:VoyageService,
-    private _localeService: BsLocaleService, 
-    private router: Router, 
-    private store: Store<AppState>) {
-    this.voyages$ = store
-      .pipe(select(selectVoyageListEntitiesConverted$));
-
+  constructor(private voyageService:VoyageService, private _localeService: BsLocaleService, private router: Router, private store: Store<AppState>) {
+    this.voyages$ = store.pipe(select(selectVoyageListEntitiesConverted$));
     this.voyagesLoading = store.pipe(select(selectVoyagesLoading$));
+    this.showVilleDepart = store.pipe(select(selectShowVilleDepart$));
+    this.showVilleArrivee = store.pipe(select(selectShowVilleArrivee$));
+    console.log(this.voyages$)
     this._localeService.use('fr');
   }
 
@@ -47,10 +47,8 @@ export class VoyageComponent implements OnInit {
 
   choixVilleDepart = true;
   choix_ville_depart(){
-    this.choixVilleDepart = true;
-    this.choixVilleArrivee = false;
-    this.choixDateDepart = false;
-    this.choixCooperative = false;
+    this.store.dispatch(new VoyagesModule.DisplayVilleDepart())
+    console.log('Infos show', this.showVilleArrivee, this.showVilleDepart)
   }
   villeDepartSelected = {
     ville_id : 1
@@ -61,10 +59,7 @@ export class VoyageComponent implements OnInit {
   }
   choixVilleArrivee = true;
   choix_ville_arrivee(){
-    this.choixVilleArrivee = true;
-    this.choixVilleDepart = false;
-    this.choixDateDepart = false;
-    this.choixCooperative = false;
+    this.store.dispatch(new VoyagesModule.DisplayVilleArrivee())
   }
 
   villeArriveeSelected = {

@@ -6,6 +6,9 @@ export interface VoyageStateEntity extends EntityState<Voyage> {
     loading: boolean;
     loaded: boolean;
     selectVoyage: Voyage;
+    errors: any;
+    showVilleDepart: boolean;
+    showVilleArrivee: boolean;
     logs: {
         type: string;
         message: string;
@@ -19,6 +22,9 @@ export const VoyageListAdapter: EntityAdapter<Voyage> = createEntityAdapter<Voya
 export const initialState: VoyageStateEntity = VoyageListAdapter.getInitialState({
     loading: false,
     loaded: false,
+    errors: null,
+    showVilleDepart: false,
+    showVilleArrivee: false,
     selectVoyage: undefined,
     logs: undefined
 });
@@ -50,6 +56,29 @@ export function voyagesReducer(
                 loading: false,
                 loaded: true,
             };
+        
+        case VoyagesModule.ActionTypes.ERROR_LOAD_VOYAGES:
+            return {
+                ...state,
+                errors: action.payload.error,
+                loading: false,
+                loaded: false
+            };
+
+        case VoyagesModule.ActionTypes.DISPLAY_LIST_VILLE_DEPART:
+            return {
+                ...state,
+                showVilleDepart: true,
+                showVilleArrivee: false
+            };
+        
+        case VoyagesModule.ActionTypes.DISPLAY_LIST_VILLE_ARRIVEE:
+            return {
+                ...state,
+                showVilleArrivee: true,
+                showVilleDepart: false
+            };
+        
         default:
             return state;
     }

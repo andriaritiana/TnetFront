@@ -148,9 +148,9 @@
 				</div>
 				
 				<div id="voyages-recherche-option-choix">
-					<div id="choix-ville-depart" [class]="choixVilleDepart ? 'active' : ''">
+					<div id="choix-ville-depart" [class]="(showVilleDepart | async) ? 'active' : ''">
 						<span class="voyages-recherche-option-choix-label">
-							Choisissez une ville de depart
+							Choisissez une ville de depart {{showVilleDepart | async}}
 						</span>
 						<!-- bloc recherche ville depart -->
 						<fieldset class="voyage-recherche-choix">
@@ -162,7 +162,7 @@
 						</ul>
 					</div>
 					
-					<div id="choix-ville-arrivee" [class]="choixVilleArrivee ? 'active' : ''">
+					<div id="choix-ville-arrivee" [class]="(showVilleArrivee | async) ? 'active' : ''">
 						<span class="voyages-recherche-option-choix-label">
 							Choisissez une ville d'arriv&eacute;e
 						</span>

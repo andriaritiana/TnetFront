@@ -14,7 +14,7 @@ export  class  VoyageListEffects {
       ofType(VoyagesModule.ActionTypes.LOAD_INIT_VOYAGES),
       switchMap(()  =>  this.voyageListService.get_all_voyages()),
       map(voyages => new VoyagesModule.SuccessInitVoyages(voyages)),
-      catchError((err) => of(new VoyagesModule.ErrorLoadAction(err)))
+      catchError((err) => of(new VoyagesModule.ErrorLoadVoyages(err)))
     );
 
   constructor(
