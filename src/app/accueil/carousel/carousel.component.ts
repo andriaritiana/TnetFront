@@ -63,9 +63,9 @@ export class CarouselComponent implements OnInit {
 
 
     this.data.getProvincesForCarousel().subscribe(
-      res => { 
-        let result = <reslt>res;
-        this.provinces = result.data;}, 
+      (res : reslt) => { 
+        this.provinces = res.data;
+      }, 
       err => console.error(err),
       () => console.log('Done loading provinces with infos')
     );

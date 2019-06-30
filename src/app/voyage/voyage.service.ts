@@ -9,7 +9,7 @@ import { Voyage } from './state/voyage.interface';
 })
 export class VoyageService {
 
-  private URL_SERVICE:any = 'http://localhost:8060';
+  private URL_SERVICE:any = 'http://tnet-service:3000';
 
   constructor(private http:HttpClient) {}
 
