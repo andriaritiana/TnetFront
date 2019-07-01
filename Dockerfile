@@ -9,14 +9,7 @@ RUN apk update \
   && yarn cache clean \
   && sed -i -e "s/bin\/ash/bin\/sh/" /etc/passwd
 
+COPY . /app-front/
+WORKDIR /app-front
 
-WORKDIR /app
-COPY . /app
-
-RUN npm install
-
-RUN npm i --save-dev @angular-devkit/build-angular
-
-VOLUME  /app
-
-CMD ng serve --host 0.0.0.0
+RUN npm i npm@latest -g && npm install && npm i --save-dev @angular-devkit/build-angular && npm i -g nodemon
