@@ -1,0 +1,13 @@
+#head-details-component {
+    margin-top: 20px;
+    width: 130%;
+    background: #fff;
+    padding: 5px;
+    margin-left: 10%;
+    height: 160px;
+}
+#info-min-details img {
+    width: 220px;
+    height: 189px;
+    float: left;
+}

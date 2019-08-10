@@ -9,6 +9,7 @@ import { reslt } from '../../common/common.interface';
 })
 export class ListeComponent implements OnInit {
   cooperatives: Object;
+  coopSelected: number = null;
   constructor(private data : DataService) { }
 
   ngOnInit() {
@@ -22,6 +23,6 @@ export class ListeComponent implements OnInit {
   }
 
   coopDetail(idcoop) {
-    console.log("Appel "+idcoop);
+    this.coopSelected = idcoop;
   }
 }

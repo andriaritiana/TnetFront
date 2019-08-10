@@ -1,15 +1,29 @@
+html body {
+    overflow-y: scroll;
+}
 #cooperative-wrapper {
+    width: 100%;
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
-    grid-template-rows: repeat(4, 100px);
-    grid-gap: 5px;
-    margin-left: 5%
+    grid-template-columns: repeat(3, 25%);
+    grid-auto-rows: 100px;
+    grid-gap: 3.5em;
+    margin-left: 8%;
+    padding-top: 4%;
+}
+#main-container {
+    height: 100%;
+    background-color: #230728;
+    padding-bottom: 40px;
 }
 .box-cooperative {
-    background-color: #8c4690;
+    background-color: #dddddd;
     cursor: pointer;
     padding: 5px;
-    color: #fff;
+    color: #000000;
+    border-radius: 10px;
+}
+.box-cooperative:hover {
+    box-shadow: 0px 0px 50px #afafaf;
 }
 .image-coop {
     width: 100px;
@@ -19,9 +33,27 @@
 }
 .info-coop {
     position: relative;
+    font-weight: bolder;
 }
 .contact-coop {
     position: absolute;
     top: 160%;
-    right: 0;
+    right: 10px;
+    font-weight: normal;
+}
+@media screen and (max-width: 995px) {
+    #cooperative-wrapper {
+        width: 100%;
+        grid-template-columns: repeat(2, 18%) !important;
+        margin-left: 5%;
+    }
+} 
+@media screen and (max-width: 765px) {
+    #cooperative-wrapper {
+        width: 100%;
+        grid-template-columns: repeat(1, 25em) !important;
+        margin-left: 4%;
+        padding-top: 2em;
+        grid-gap: 2em;
+    }
 }

@@ -1,3 +1,5 @@
+var cptr = 1, act = "inc";
+
 function defilerSlideADroite(e) {
     e.preventDefault();
     
@@ -29,7 +31,7 @@ $(function() {
     $(document).on("click","#slide-prev > a", defilerSlideAGauche);
     $(document).on("click","#slide-pagination > ul > li > a", function(e) {
         e.preventDefault();
-    
+        console.log('call');
         var index = $(this).parent().index();
         
         $("#slide > ul > li.current").removeClass("current");
@@ -39,4 +41,19 @@ $(function() {
         $("#slide-pagination > ul > li.active").removeClass("active");
         $($("#slide-pagination > ul > li")[index]).addClass("active");
     });
+
+    console.log("ccc");
+    setTimeout(function(){
+        console.log("appel "+act+" "+cptr);
+        if(cptr == 6) {
+            act = "dec";
+            cptr = 5;
+        } else if (i == 1) {
+            act = "inc";
+            cptr = 1;
+        } else {
+            cptr = act == "inc" ? cptr + 1 : cptr - 1;
+        }
+        
+    }, 1000);
 });

@@ -1,3 +1,15 @@
-<p>
-  details works!
-</p>
+<div *ngIf="details; else errorDetails">
+  <div id = "details-cooperative">
+    <div id = "head-details-component">
+      <div id = "info-min-details">
+        <img src = {{details.coop_urlimage}} />
+      </div>
+      <div id = "info-details-details">
+        {{details.coop_description}}
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #errorDetails>
+  <div class = "alert alert-danger">Erreur de chargement des détails, veuillez actualiser puis réessayer</div>
+</ng-template>

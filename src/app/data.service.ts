@@ -19,4 +19,8 @@ export class DataService {
   getProvincesForCarousel() {
     return this.http.get(this.base_url +"api/provinces/infos");
   }
+
+  getDetailCoop(idcoop) {
+    return this.http.get(this.base_url +"api/cooperative/"+idcoop);
+  }
 }

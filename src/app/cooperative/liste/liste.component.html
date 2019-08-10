@@ -1,15 +1,20 @@
 <!-- corps -->
 <div id="main-container">
-  <div id = "cooperative-wrapper">
-    <div *ngFor = "let cooperative of cooperatives" (click) = "coopDetail(cooperative.coop_id)" [attr.class] = "'box-cooperative'">
-      <img src = "{{cooperative.coop_urlimage}}" class = "image-coop" />
-      <div class = "info-coop">
-        {{cooperative.coop_abrev | uppercase}}<br/>
-        {{cooperative.coop_nom}}
-        <span class = "contact-coop">
-          {{cooperative.coop_contactclient}}
-        </span>
+  <div *ngIf="coopSelected; else listecoop">
+    <coop-details [idcoop] = coopSelected></coop-details>
+  </div>
+  <ng-template #listecoop>
+    <div id = "cooperative-wrapper" >
+      <div *ngFor = "let cooperative of cooperatives" (click) = "coopDetail(cooperative.coop_id)" [attr.class] = "'box-cooperative'">
+        <img src = "{{cooperative.coop_urlimage}}" class = "image-coop" />
+        <div class = "info-coop">
+          {{cooperative.coop_abrev | uppercase}}<br/>
+          {{cooperative.coop_nom}}
+          <span class = "contact-coop">
+            {{cooperative.coop_contactclient}}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-template>
 </div>

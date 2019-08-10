@@ -13,10 +13,32 @@ declare var $ :any;
 export class CarouselComponent implements OnInit {
 
   provinces: Object;
+  action: string = "incr";
+  cptr: number = 1;
 
   constructor(private data : DataService) { }
 
   ngOnInit() {
+    let comp = this;
+
+    function clickOnTimeOut(timeout, action, cptr) {
+      setTimeout(function(){
+        if(cptr == 6) {
+            comp.action = "dec";
+            comp.cptr = 5;
+            $("#slide-prev > a").trigger('click');
+        } else if (cptr == 1) {
+            comp.action = "inc";
+            comp.cptr = 2;
+            $("#slide-next > a").trigger('click');
+        } else {
+            comp.cptr = action == "inc" ? cptr + 1 : cptr - 1;
+            if(action == "inc") $("#slide-next > a").trigger('click');
+            else $("#slide-prev > a").trigger('click');
+        }
+        clickOnTimeOut(timeout, comp.action, comp.cptr);
+      }, timeout);
+    }
 
     function defilerSlideADroite(e) {
       e.preventDefault();
@@ -59,6 +81,7 @@ export class CarouselComponent implements OnInit {
         $("#slide-pagination > ul > li.active").removeClass("active");
         $($("#slide-pagination > ul > li")[index]).addClass("active");
       });
+      clickOnTimeOut(10000, comp.action, comp.cptr);
     });
 
 
